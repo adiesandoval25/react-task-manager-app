@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Graphik, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  background: #efefef;
+}
+
+#root {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.App {
+  width: 100%;
+  max-width: 1300px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #333;
+  box-shadow: 0px 0px 15px gray;
+}
+
+.Header, .Footer {
+  width: 100%;
+  background:linear-gradient(to right, rgb(235, 16, 144),pink );
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.Header h1 {
+  font-size: 2rem;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.Header svg {
+  font-size: 1.5rem;
+  
+}
+
+.Footer {
+  padding: 0.3rem;
+  display: grid;
+  place-content: center;
+}
+
+
+.Footer p {
+  font-family: Graphik, serif;
+  min-height: 10px;
+  font-size: .7rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Nav {
+  width: 100%;
+  background:linear-gradient(to right, rgb(235, 16, 144),pink );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+
+  
+}
+
+
+
+.Nav ul {
+  color: #fff;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.Nav li {
+  padding: 0.5rem;
+}
+
+.Nav li:hover, 
+.Nav li:focus {
+  padding: 0.5rem;
+}
+
+.Nav li a {
+  color: #080707;
+  text-decoration: none;
+}
+
+.Nav li:hover, 
+.Nav li:focus, 
+.Nav li:hover a, 
+.Nav li:focus a  {
+  background-color: #eee;
+  color: #333;
+}
+
+.Nav li:hover a, 
+.Nav li:focus a {
+  cursor: pointer;
+}
+
+.Tasks, .NewTask, .ViewTask, .About {
+  width: 100%;
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #ffffff;
+
+}
+
+
+.Missing {
+  width: 100%;
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #ffffff;
+  
+
+}
+.task {
+  font-size: 1rem;
+  margin-top: 0rem;
+  padding-bottom: 0rem;
+  border-bottom: 1px solid lightgray;
+}
+
+.Tasks .task a {
+  text-decoration: none;
+}
+
+.Tasks .task a, 
+.Tasks .task a:visited {
+  color: #000;
+}
+
+.task:first-child {
+  margin-top: 0;
+}
+
+.task:last-child {
+  border-bottom: none;
+}
+
+.newTaskForm {
+  display: flex;
+  flex-direction: column;
+ 
+  
+}
+
+.newTaskForm label {
+  margin-top: 0.25rem;
+  
+}
+
+.newTaskForm input[type='text'] {
+  font-family: Graphik, serif;
+  width: 50%;
+  min-height: 20px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  
+}
+
+.newTaskForm input[type='date']{
+  font-family: Graphik, serif;
+  width: 50%;
+  min-height: 20px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  outline: none;
+}
+
+
+.newTaskForm button {
+  margin-top: 1rem;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.Missing p {
+  margin-bottom: 0.5rem;
+
+
+}
+
+.ViewTask p, .NewTask p {
+  margin-bottom: 0.5rem;
+
+  
+}
+
+.ViewTask button {
+  height: 48px;
+  min-width: 48px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  font-family: Graphik, serif;
+}
+
+
+
+.deleteButton {
+  background-color: pink;
+}
+
+.editButton {
+  background-color: pink;
+}
+
+.backButton {
+  margin-top: 2rem;
+  background-color:rgb(243, 64, 168);
+}
+
+.backButtonError {
+  height: 48px;
+  min-width: 48px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: #111111;
+  background-color:rgb(243, 64, 168);
+  cursor: pointer;
+  font-family: Graphik, serif;
+}
+
+.addNew {
+  height: 48px;
+  min-width: 48px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: #fcfcfc;
+  background-color: pink;
+  cursor: pointer;
+  font-family: Graphik, serif;
+}
+
+.addButton {
+  height: 25px;
+  min-width: 25px;
+  border-radius: 0.25rem;
+  padding: 0rem;
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+  color: #fcfcfc;
+  background-color: pink;
+  cursor: pointer;
+  font-family: Graphik, serif;
+}
+.submitButton {
+  width: 50%;
+  background-color:rgb(243, 64, 168);
+  font-family: Graphik, serif;
+}
+
+.statusMsg {
+  margin-top: 2rem;
+}
+
+@media only screen and (min-width: 610px) {
+  html {
+    font-size: 22px;
+  }
+
+  .Header h1 {
+    font-size: 1.5rem;
+  }
+
+  .Nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px
+  }
+
+  .Nav ul {
+    text-align: right;
+  }
+
+  .Nav li:hover, 
+  .Nav li:focus, 
+  .Nav li:hover a, 
+  .Nav li:focus a  {
+    background-color: transparent; 
+    text-decoration: none;
+  }
+
+
+  .table {
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    margin: auto;
+    
+  }
+
+  .table tbody tr:nth-child(odd) {
+    background-color:pink;
+  }
+  
+  
+  .tabletbody tr:nth-child(even) {
+    background-color: #eee;
+  }
+  .th, td {
+    padding: 10px;
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+  .Header svg {
+    font-size: 3rem;
+  }
+
+}
